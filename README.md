@@ -53,7 +53,7 @@ This plugin removes the bar entirely and replaces it with something faster:
 - Respects user permissions
 - Does nothing when disabled
 
-## 📄 License
+## License
 
 MIT — see `LICENSE`.
 
