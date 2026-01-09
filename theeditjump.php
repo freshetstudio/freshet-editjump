@@ -6,6 +6,8 @@
  * Author URI: https://kristoffbertram.be
  * Plugin URI: https://github.com/kristoffbertram/theeditjump
  * Version: 1.0.0
+ * License: MIT
+ * License URI: https://opensource.org/licenses/MIT
  */
 
 defined('ABSPATH') || exit;
