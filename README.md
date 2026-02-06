@@ -6,13 +6,13 @@ Hide WordPress’ front-end admin bar and jump **directly to the edit screen** w
 
 ## Features
 
-- Hides the **front-end admin bar** (no top margin injection → no layout shift)
-- Jump **directly to the edit screen** of the current post/page
-- Smart, OS-aware keyboard shortcuts:
+- Hides the front-end admin bar (no top margin injection → no layout shift)
+- Jump directly to the edit screen of the current post/page
+- OS-aware keyboard shortcuts:
   - **macOS:** `⌘ + E`
   - **Windows / Linux:** `Ctrl + E`
   - **Fallback (all):** `Alt + Shift + E`
-- **Instant toggle** to bring the admin bar back (soft-disable):
+- Instant toggle to bring the admin bar back (soft-disable):
   - **macOS:** `⌘ + ⌥ + E`
   - **Windows / Linux:** `Ctrl + Alt + E`
 
@@ -42,13 +42,10 @@ The WordPress admin bar is useful — but it:
 - shifts layouts
 - breaks pixel-perfect front-end work
 
-This plugin removes the bar entirely and replaces it with something faster:
-**your keyboard**.
+This plugin removes the bar entirely and replaces it with something your keyboard.
 
 ## Technical notes
 
-- Uses `event.code` instead of `event.key`  
-  (important for macOS Option/Alt behavior)
 - Front-end only
 - Respects user permissions
 - Does nothing when disabled

@@ -50,7 +50,7 @@ add_action('wp_enqueue_scripts', function () {
 		}
 	}
 
-	wp_register_script('theeditjump', '', [], '0.4.0', true);
+	wp_register_script('theeditjump', '', [], '1.0.0', true);
 	wp_enqueue_script('theeditjump');
 
 	wp_add_inline_script(
