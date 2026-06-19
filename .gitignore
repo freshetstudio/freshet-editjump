@@ -1,1 +1,4 @@
-.vscode
+# OS / editor
+.DS_Store
+.idea/
+CLAUDE.md
