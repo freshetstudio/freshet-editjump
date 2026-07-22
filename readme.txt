@@ -4,11 +4,11 @@ Tags: admin bar, edit, keyboard shortcut, productivity
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
-Hides WP's admin bar and adds a keyboard shortcut (Cmd+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
+Hides WP's admin bar for users who can edit content, and adds a keyboard shortcut (Cmd+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
 
 == Description ==
 
@@ -18,7 +18,7 @@ The admin bar takes 32 pixels of every logged-in page view to offer buttons you 
 * **Alt+Shift+E** — universal fallback shortcut.
 * **Cmd/Ctrl+Alt+E** — toggle the admin bar back on temporarily (per-browser, via cookie).
 
-The jump only activates on singular views where you actually have edit permission. Shortcuts stay out of the way while you're typing in a field.
+The jump only activates on views with a real edit target — singular views, plus the blog index when a static posts page is set — and only where you actually have edit permission. The admin bar is only hidden for users who can edit content; other logged-in roles (members, subscribers) keep it untouched. Shortcuts stay out of the way while you're typing in a field.
 
 == Installation ==
 
@@ -31,6 +31,11 @@ The jump only activates on singular views where you actually have edit permissio
 Press Cmd/Ctrl+Alt+E to toggle it on for your browser, or deactivate the plugin.
 
 == Changelog ==
+
+= 1.1.0 =
+* Admin bar is now only hidden for users who can edit content (edit_posts); other logged-in roles keep it.
+* Jump also works on the blog index when a static posts page is set.
+* Version string centralised in FRESHET_EDITJUMP_VERSION.
 
 = 1.0.1 =
 * Move inline script to an asset file; plugin-check clean.
