@@ -1,6 +1,6 @@
 (function () {
-  var cfg = window.theeditjump || {};
-  var cookieKey = cfg.cookieKey || 'theeditjump_disabled';
+  var cfg = window.freshetEditJump || {};
+  var cookieKey = cfg.cookieKey || 'freshet_editjump_disabled';
 
   // Robust platform detection
   var platform = '';

@@ -1,6 +1,8 @@
-# The Edit Jump
+# Freshet Edit Jump
 
-_1.0.0_
+_1.0.1_
+
+By [Freshet Studio](https://freshet.studio).
 
 Hide WordPress’ front-end admin bar and jump **directly to the edit screen** with a keyboard shortcut.
 

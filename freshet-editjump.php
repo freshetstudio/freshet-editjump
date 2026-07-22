@@ -1,20 +1,23 @@
 <?php
 /**
- * Plugin Name: The Edit Jump
- * Description: Hides WP's admin bar and adds a keyboard shortcut (⌘+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
- * Author: Kristoff Bertram
- * Author URI: https://kristoffbertram.be
- * Plugin URI: https://github.com/kristoffbertram/theeditjump
- * Version: 1.0.1
- * License: MIT
- * License URI: https://opensource.org/licenses/MIT
+ * Plugin Name:       Freshet Edit Jump
+ * Plugin URI:        https://freshet.studio
+ * Description:       Hides WP's admin bar and adds a keyboard shortcut (⌘+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
+ * Version:           1.0.1
+ * Requires at least: 6.0
+ * Requires PHP:      7.4
+ * Author:            Freshet Studio
+ * Author URI:        https://freshet.studio
+ * License:           MIT
+ * License URI:       https://opensource.org/licenses/MIT
+ * Text Domain:       freshet-editjump
  */
 
 defined('ABSPATH') || exit;
 
-function theeditjump_is_disabled(): bool {
+function freshet_editjump_is_disabled(): bool {
 	// Soft-disable via cookie so you can toggle without touching WP plugins.
-	return isset($_COOKIE['theeditjump_disabled']) && $_COOKIE['theeditjump_disabled'] === '1';
+	return isset($_COOKIE['freshet_editjump_disabled']) && $_COOKIE['freshet_editjump_disabled'] === '1';
 }
 
 add_action('after_setup_theme', function () {
@@ -24,7 +27,7 @@ add_action('after_setup_theme', function () {
 	}
 
 	// If disabled, do nothing (admin bar remains).
-	if ( theeditjump_is_disabled() ) {
+	if ( freshet_editjump_is_disabled() ) {
 		return;
 	}
 
@@ -39,7 +42,7 @@ add_action('wp_enqueue_scripts', function () {
 		return;
 	}
 
-	$disabled = theeditjump_is_disabled();
+	$disabled = freshet_editjump_is_disabled();
 
 	// Only allow "jump to edit" on singular screens with a real edit link.
 	$edit_url = null;
@@ -50,15 +53,15 @@ add_action('wp_enqueue_scripts', function () {
 		}
 	}
 
-	wp_register_script('theeditjump', plugins_url('assets/theeditjump.js', __FILE__), [], '1.0.1', true);
-	wp_enqueue_script('theeditjump');
+	wp_register_script('freshet-editjump', plugins_url('assets/freshet-editjump.js', __FILE__), [], '1.0.1', true);
+	wp_enqueue_script('freshet-editjump');
 
 	wp_add_inline_script(
-		'theeditjump',
-		'window.theeditjump = ' . wp_json_encode([
+		'freshet-editjump',
+		'window.freshetEditJump = ' . wp_json_encode([
 			'editUrl'   => $edit_url,         // null when not applicable
 			'disabled'  => $disabled,
-			'cookieKey' => 'theeditjump_disabled',
+			'cookieKey' => 'freshet_editjump_disabled',
 		]) . ';',
 		'before'
 	);

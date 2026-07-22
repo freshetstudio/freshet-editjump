@@ -1,4 +1,4 @@
-=== The Edit Jump ===
+=== Freshet Edit Jump ===
 Contributors: kristoffbertram
 Tags: admin bar, edit, keyboard shortcut, productivity
 Requires at least: 6.0
@@ -12,7 +12,7 @@ Hides WP's admin bar and adds a keyboard shortcut (Cmd+E / Ctrl+E, or Alt+Shift+
 
 == Description ==
 
-The admin bar takes 32 pixels of every logged-in page view to offer buttons you rarely click. The Edit Jump removes it and replaces the one thing you actually use — "Edit this page" — with a keyboard shortcut:
+The admin bar takes 32 pixels of every logged-in page view to offer buttons you rarely click. Freshet Edit Jump removes it and replaces the one thing you actually use — "Edit this page" — with a keyboard shortcut:
 
 * **Cmd+E** (Mac) / **Ctrl+E** (Windows/Linux) — jump straight to the edit screen of the page you're viewing.
 * **Alt+Shift+E** — universal fallback shortcut.
