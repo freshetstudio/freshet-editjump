@@ -21,7 +21,7 @@ define('FRESHET_EDITJUMP_VERSION', '1.1.0');
 
 function freshet_editjump_is_disabled(): bool {
 	// Soft-disable via cookie so you can toggle without touching WP plugins.
-	return isset($_COOKIE['freshet_editjump_disabled']) && $_COOKIE['freshet_editjump_disabled'] === '1';
+	return isset($_COOKIE['freshet_editjump_disabled']) && wp_unslash($_COOKIE['freshet_editjump_disabled']) === '1';
 }
 
 add_action('after_setup_theme', function () {
