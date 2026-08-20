@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Freshet Edit Jump
  * Plugin URI:        https://freshet.studio
- * Description:       Hides WP's admin bar for users who can edit content, and adds a keyboard shortcut (⌘+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
+ * Description:       Hides WP's admin bar for users who can edit content, and adds a keyboard shortcut (Cmd+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
  * Version:           1.1.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
@@ -11,6 +11,7 @@
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       freshet-editjump
+ * Domain Path:       /languages
  */
 
 defined('ABSPATH') || exit;
@@ -18,6 +19,14 @@ defined('ABSPATH') || exit;
 // Single version source for enqueues; keep in sync with the header + readme
 // stable tag (portfolio convention, same as freshet-feeds / freshet-unusedmedia).
 define('FRESHET_EDITJUMP_VERSION', '1.1.0');
+
+// Translations shipped inside the plugin's own /languages need this call —
+// without a custom path the textdomain registry only looks in WP_LANG_DIR, so
+// wp.org-delivered translations load either way but a bundled .mo never would.
+// On init: nothing here translates earlier.
+add_action('init', function () {
+	load_plugin_textdomain('freshet-editjump', false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
 
 function freshet_editjump_is_disabled(): bool {
 	// Soft-disable via cookie so you can toggle without touching WP plugins.
