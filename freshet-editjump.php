@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name:       Freshet Edit Jump
- * Plugin URI:        https://freshet.studio
  * Description:       Hides WP's admin bar for users who can edit content, and adds a keyboard shortcut (Cmd+E / Ctrl+E, or Alt+Shift+E) to jump directly to edit.
  * Version:           1.1.0
  * Requires at least: 6.0
