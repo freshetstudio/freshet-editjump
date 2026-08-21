@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="772" height="250" viewBox="0 0 772 250" role="img" aria-label="Freshet Edit Jump">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3A0B7A"/>
-      <stop offset="1" stop-color="#7B22F0"/>
+      <stop offset="0" stop-color="#0A1499"/>
+      <stop offset="1" stop-color="#1122ff"/>
     </linearGradient>
   </defs>
   <rect width="772" height="250" fill="url(#bg)"/>
@@ -11,6 +11,6 @@
     <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
   </g>
   <text x="196" y="128" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="61" font-weight="800" fill="#ffffff" letter-spacing="-1">Freshet Edit Jump</text>
-  <text x="198" y="168" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="500" fill="#B49BD8">Straight to the editor</text>
-  <text x="198" y="198" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="500" fill="#DED3F2" letter-spacing="0.5">Cmd+E &#183; Ctrl+E &#183; No admin bar</text>
+  <text x="198" y="168" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="500" fill="#8FA998">Straight to the editor</text>
+  <text x="198" y="198" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="500" fill="#c7cbe8" letter-spacing="0.5">Cmd+E &#183; Ctrl+E &#183; No admin bar</text>
 </svg>
